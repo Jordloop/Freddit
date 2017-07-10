@@ -1,10 +1,11 @@
 export class Topic {
-  constructor(public title: string, public text: string, public date: object, public image: string, public tag: string, public userName: string) {
+  public postDate: string = Date();
+  constructor(public title: string, public text: string, public image: string, public tag: string, public userName: string, public id: number) {
     this.title = title,
     this.text = text,
-    this.date = date,
     this.image = image,
     this.tag = tag,
-    this.userName = userName;
+    this.userName = userName,
+    this.id = id;
   }
 }

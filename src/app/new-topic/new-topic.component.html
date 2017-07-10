@@ -1,0 +1,15 @@
+<div class="container">
+  <label>Title</label>
+  <input #title>
+  <label>Text</label>
+  <input #text>
+  <label>Image</label>
+  <input #image>
+  <label>Tag</label>
+  <input #tag>
+  <label>UserName</label>
+  <input #userName>
+  <label>Id</label>
+  <input #id>
+  <button (click)="submitNewTopicForm(title.value, text.value, image.value, tag.value, userName.value, id.value);">Add Topic</button>
+</div>

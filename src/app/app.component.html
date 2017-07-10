@@ -5,6 +5,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="about">About</a></li>
+      <li><a routerLink="newTopic">New SubFreddit</a></li>
     </ul>
   </div>
 </nav>
@@ -13,6 +14,8 @@
   <h1>{{title}}</h1>
 
   <app-topic-list [childTopicList]="masterTopicList"></app-topic-list>
+
+  <!-- <app-new-topic (newTopicSender)="addTopic($event)"></app-new-topic> -->
 
   <router-outlet></router-outlet>
 </div>
