@@ -12,9 +12,12 @@
 
 <div class="container">
   <h1>{{title}}</h1>
+  <ul>
+    <li *ngFor="let currentTopic of topics" (click)="goToDetailPage(currentTopic)">{{currentTopic.title}}</li>
+  </ul>
 
-  <app-topic-list></app-topic-list>
-  <!-- <app-new-topic (newTopicSender)="addTopic($event)"></app-new-topic> -->
+<!-- <app-new-topic></app-new-topic> -->
+<!-- <app-topic-detail [displayDetail]="topicClicked"></app-topic-detail> -->
 
   <router-outlet></router-outlet>
 </div>

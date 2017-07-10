@@ -11,4 +11,15 @@ export class TopicService {
     return TOPICS;
   }
 
+  getTopicById(topicId: number) {
+    for (var i = 0; i <= TOPICS.length - 1; i++) {
+      if (TOPICS[i].id === topicId) {
+        return TOPICS[i];
+      }
+    }
+  }
+
+  addTopic(topicToAdd: Topic) {
+    TOPICS.push(topicToAdd);
+  }
 }

@@ -1,16 +1,29 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { Topic } from './../topic.model';
+import { TopicService } from '../topic.service';
 
 @Component({
   selector: 'app-new-topic',
   templateUrl: './new-topic.component.html',
-  styleUrls: ['./new-topic.component.css']
+  styleUrls: ['./new-topic.component.css'],
+  providers: [TopicService]
 })
-export class NewTopicComponent {
-  @Output() newTopicSender = new EventEmitter();
+export class NewTopicComponent implements OnInit {
+  topicToAdd: Topic;
 
-  submitNewTopicForm(title: string, text: string, image: string, tag: string, userName: string, id: number) {
-    const newTopicToAdd: Topic = new Topic(title, text, image, tag, userName, id);
-    this.newTopicSender.emit(newTopicToAdd);
+  constructor(private route: ActivatedRoute, private location: Location, private topicService: TopicService) { }
+
+  ngOnInit() {
+    
   }
+
+
+
+
+
+
+
+
 }
