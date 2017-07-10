@@ -11,5 +11,8 @@
 
 <div class="container">
   <h1>{{title}}</h1>
+
+  <app-topic-list [childTopicList]="masterTopicList"></app-topic-list>
+
   <router-outlet></router-outlet>
 </div>
